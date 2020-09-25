@@ -25,54 +25,54 @@ type largeLabelType struct {
 
 func parseLabelLarge(t **template.Template) {
 	zpl := `^XA
-^FT300,1300
+^FT265,1250
 ^A@B,70,65,E:ROB002.TTF^FD{{.A.Product}}^FS
-^FT220,1550
-^A@B,150,145,E:ROB002.TTF^FD{{.A.StorageBinDisplay}}^FS
-^FT250,280
-^A@B,200,,E:ROB002.TTF^FD{{.A.Check1}}^FS
-^FT250,130
-^A@B,200,,E:ROB002.TTF^FD{{.A.Check2}}^FS
+^FT185,1550
+^A@B,190,135,E:ROB002.TTF^FD{{.A.StorageBinDisplay}}^FS
+^FT200,310
+^A@B,230,,E:ROB002.TTF^FD{{.A.Check1}}^FS
+^FT200,160
+^A@B,230,,E:ROB002.TTF^FD{{.A.Check2}}^FS
 ^FT20,320
-^GB250,150,2^FS
+^GB195,150,2^FS
 ^FT20,172
-^GB250,150,2^FS
+^GB195,150,2^FS
 ^FO20,365
-^BY4^BCB,260,N,,,A
+^BY3^BCB,260,N,,,A
 ^FD{{.A.StorageBin}}^FS
-^FT385,1300
-^A@B,{{.A.DescHeight}},{{.A.DescWidth}},E:ROB004.TTF^FB1290,1,0,C^FD{{.A.Description}}^FS
-^FT100,330
+^FT375,1250
+^A@B,{{.A.DescHeight}},{{.A.DescWidth}},E:ROB004.TTF^FB1245,1,0,C^FD{{.A.Description}}^FS
+^FT115,340
 ^A@N,20,18,E:ROB002.TTF^FD{{.A.TodayDate}}^FS
-^FT240,1475
+^FT240,1425
 ^GB150,150,2^FS
-^FT340,1470
-^A@B,64,,E:ROB002.TTF^FB180,1,0,C^FD{{.A.UOM}}^FS
+^FT365,1440
+^A@B,105,100,E:ROB002.TTF^FB180,1,0,C^FD{{.A.UOM}}^FS
 ^FT260,1555
 ^A@N,200,,E:SYM003.TTF^FD{{.A.Arrow}}^FS
-{{ if eq .Count 2}}^FT715,1300
+{{ if eq .Count 2}}^FT680,1250
 ^A@B,70,65,E:ROB002.TTF^FD{{.B.Product}}^FS
-^FT635,1550
-^A@B,150,145,E:ROB002.TTF^FD{{.B.StorageBinDisplay}}^FS
-^FT665,280
-^A@B,200,,E:ROB002.TTF^FD{{.B.Check1}}^FS
-^FT665,130
-^A@B,200,,E:ROB002.TTF^FD{{.B.Check2}}^FS
+^FT600,1550
+^A@B,190,135,E:ROB002.TTF^FD{{.B.StorageBinDisplay}}^FS
+^FT615,310
+^A@B,230,,E:ROB002.TTF^FD{{.B.Check1}}^FS
+^FT615,160
+^A@B,230,,E:ROB002.TTF^FD{{.B.Check2}}^FS
 ^FT435,320
-^GB250,150,2^FS
+^GB195,150,2^FS
 ^FT435,172
-^GB250,150,2^FS
+^GB195,150,2^FS
 ^FO435,365
-^BY4^BCB,260,N,,,A
+^BY3^BCB,260,N,,,A
 ^FD{{.B.StorageBin}}^FS
-^FT800,1300
-^A@B,{{.B.DescHeight}},{{.B.DescWidth}},E:ROB004.TTF^FB1290,1,0,C^FD{{.B.Description}}^FS
-^FT515,330
+^FT790,1250
+^A@B,{{.B.DescHeight}},{{.B.DescWidth}},E:ROB004.TTF^FB1245,1,0,C^FD{{.B.Description}}^FS
+^FT530,340
 ^A@N,20,18,E:ROB002.TTF^FD{{.B.TodayDate}}^FS
-^FT655,1475
+^FT655,1425
 ^GB150,150,2^FS
-^FT755,1470
-^A@B,64,,E:ROB002.TTF^FB180,1,0,C^FD{{.B.UOM}}^FS
+^FT780,1440
+^A@B,105,100,E:ROB002.TTF^FB180,1,0,C^FD{{.B.UOM}}^FS
 ^FT680,1555
 ^A@N,200,,E:SYM003.TTF^FD{{.B.Arrow}}^FS
 {{end}}^XZ
@@ -87,4 +87,3 @@ func parseLabelLarge(t **template.Template) {
 	*t = tt
 
 }
-
